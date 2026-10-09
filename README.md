@@ -54,8 +54,11 @@ The easiest way is Google Colab with a GPU runtime (Runtime → Change runtime t
 1. Open `ner_pipeline.ipynb` in Colab or Jupyter.
 2. Install the dependencies (the first code cell does this for you):
    ```bash
-   pip install -r requirements.txt
+   pip install "setuptools<81" wheel setuptools_scm
+   pip install --no-build-isolation seqeval
+   pip install transformers datasets accelerate torch
    ```
+   `seqeval` has to be installed this way on Python 3.13 and newer, because its old-style installer needs those build tools to be present.
 3. Run the cells in order. The dataset downloads automatically.
 
 **Training from scratch** (Section 8) takes around 15 minutes on a Colab GPU.

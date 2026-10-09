@@ -1,0 +1,6 @@
+transformers>=4.45
+datasets
+seqeval
+torch
+numpy
+accelerate

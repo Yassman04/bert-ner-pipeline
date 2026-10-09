@@ -1,0 +1,6 @@
+saved_ner_model/
+bert-ner-results/
+bert-ner-eval/
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store

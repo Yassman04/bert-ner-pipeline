@@ -22,9 +22,9 @@ Evaluated on the CoNLL-2003 test set (3,453 sentences the model never saw during
 | Model | Precision | Recall | F1 |
 |---|---|---|---|
 | Rule-based baseline (capitalised words) | 0.05 | 0.08 | 0.06 |
-| **Fine-tuned BERT (`bert-base-cased`)** | **0.912** | **0.924** | **0.918** |
+| **Fine-tuned BERT (`bert-base-cased`)** | **0.905** | **0.920** | **0.912** |
 
-The baseline tags every capitalised word (apart from the first word of a sentence) as an entity. It barely works because capitalisation alone can't tell a person from a company from a place, so it has to give everything the same label. BERT gets about 92% F1 by learning from context instead.
+The baseline tags every capitalised word (apart from the first word of a sentence) as an entity. It barely works because capitalisation alone can't tell a person from a company from a place, so it has to give everything the same label. BERT reaches 91.2% F1 (and 98.3% token-level accuracy) by learning from context instead.
 
 It also holds up on text it wasn't trained on, like this news paragraph:
 
